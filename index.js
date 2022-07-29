@@ -1,7 +1,9 @@
-const express  = require('express')
+require('module-alias/register') //路径别名
+const express = require('express')
 const app = express()
+
 app.listen(4000, () => {
-  console.log('启动服务');
+  console.log('启动服务成');
 })
 
 //连接数据库
@@ -9,6 +11,7 @@ require('./middleware/mongoose')
 
 //引入跨域资源
 app.use(require('./middleware/cors'))
+
 //引入 session 免登录
 app.use(require('./middleware/session'))
 
@@ -17,4 +20,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 //路由
-app.use('/',require('./router/index'))
+app.use('/', require('./router/index'))
+
+//开放静态资源
+app.use(express.static('./public'))
+

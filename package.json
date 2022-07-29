@@ -17,6 +17,16 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "mongoose": "^6.3.8"
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.3.8",
+    "multer": "^1.4.5-lts.1"
+  },
+  "_moduleAliases": {
+    "@": "index.js",
+    "db": "db",
+    "router": "router",
+    "middllware": "middllware",
+    "public": "public",
+    "utils": "utils"
   }
 }

@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
-//注册路由
-router.use('/reg',require('./reg'))
-//登录路由
+const routerConfig = require('./routerConfig')
+console.log(routerConfig)
+//路由配置
+routerConfig(router)
 
-module.exports = router
+
+module.exports  = router
